@@ -569,12 +569,6 @@ def _impl(ctx):
             features = ["crosstool_cpu_asmjs"],
         ),
         flag_set(
-            actions = all_compile_actions +
-                      all_link_actions,
-            flags = ["-s", "USE_PTHREADS=1"],
-            features = ["use_pthreads"],
-        ),
-        flag_set(
             actions = all_link_actions,
             flags = ["-s", "EXIT_RUNTIME=1"],
             features = ["exit_runtime"],
